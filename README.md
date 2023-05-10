@@ -34,7 +34,7 @@ Watch this [Introduction Video](https://youtu.be/THy_d33Ih6M) to learn more abou
 + [Funding](#funding)
 
 
-The data used in this module is stored in a Google Cloud bucket and does require using **gsutil** commands to download the data sets.  R packages used will be downloaded from within each notebook.
+The data used in this module is stored in a Google Cloud bucket and does require using `gsutil` commands to download the data sets.  R packages used will be downloaded from within each notebook.
 
 
 
@@ -62,16 +62,16 @@ Submodules 2-4 cover optional background material for learners who need it and m
 
 ## Software Requirements
 
-This module employs Jupyter Notebooks running R 4.2 using Bioconductor for bioinformatics data analysis and will employ tidy data principles implemented by the <i>tidyverse</i> package.  A basic knowledge of R is expected but not required for completing the module. Submodule 02 will review R data structures that will be particularly relevant in regression analysis.  Required R packages will be installed within each submodule.  The installation can take several minutes the first time the packages are installed.  Key packages used include <i>tidyverse</i> and BioConductor packages such as <i>limma</i>.  Prior understanding of these packages is not required to complete this module but users are encouraged to learn more about these packages prior to or following completion of this module to better understand the commands used.
+This module employs Jupyter Notebooks running R 4.2 using Bioconductor for bioinformatics data analysis and will employ tidy data principles implemented by the *tidyverse* package.  A basic knowledge of R is expected but not required for completing the module. Submodule 02 will review R data structures that will be particularly relevant in regression analysis.  Required R packages will be installed within each submodule.  The installation can take several minutes the first time the packages are installed.  Key packages used include *tidyverse* and BioConductor packages such as *limma* .  Prior understanding of these packages is not required to complete this module but users are encouraged to learn more about these packages prior to or following completion of this module to better understand the commands used.
 
-Jupyter Notebooks are run through your browser and have the file extension <i>.ipynb</i>.  Activate the notebook by double-clicking the file name and it will automatically open in your browser. Each notebook consists of markdown and code cells.  Markdown cells are for text and figures and are there to guide you through the chapters.  Code cells can be run by clicking the play arrow at the top of the screen or by hitting CTRL-ENTER.  The code will run within the notebook and generate the appropriate output.  You may freely change the code and re-run the block as often as you like.  This is useful if you want to test different analysis models or modify figures. 
+Jupyter Notebooks are run through your browser and have the file extension *ipynb*.  Activate the notebook by double-clicking the file name and it will automatically open in your browser. Each notebook consists of markdown and code cells.  Markdown cells are for text and figures and are there to guide you through the chapters.  Code cells can be run by clicking the play arrow at the top of the screen or by hitting CTRL-ENTER.  The code will run within the notebook and generate the appropriate output.  You may freely change the code and re-run the block as often as you like.  This is useful if you want to test different analysis models or modify figures. 
 
 
 ## Installing the Module
 
 The below steps guide you through setting up a virtual machine on Google Cloud Platform, downloading the module files, and launching the notebooks. You will need a Google account and access to a Google Cloud Platform Project.
 
-Once you have these, you can begin by first navigating to https://console.cloud.google.com/ and logging in with your credentials. Use the following <a href="https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/open_GCP_project.md">instructions</a> to open a GCP project.
+Once you have these, you can begin by first navigating to https://console.cloud.google.com/ and logging in with your credentials. Use the following [instructions](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/open_GCP_project.md) to open a GCP project.
 
 
 ### Navigating to the Vertex AI Workbench
@@ -83,7 +83,7 @@ Once a project has been selected, navigate to the Vertex AI Workbench (either by
 
 A virtual machine is exactly what it sounds like.  When creating a VM, we are allocating computing resources into a contained environment where we can perform whatever task we need to do.  In GCP, we can either create VM's manually through Compute Engine or we can create them automatically through other processes.  We will now create a new VM for our modules through Vertex AI.
 
-Use the following <a href="https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/vertexai.md">instructions</a> to set up your VM in VertexAI.  Our notebooks include a notebook that uses R code, so make sure you are using the 'R' framework (R 4.2 at the time of this writing). You can then choose a name for your virtual machine (within GCP's naming rules) and preferably choose a server location closest to you (we recommend us-central-iowa). Ignore the advanced options for now, and a default virtual machine will be created. A default machine has 4 vCPUS and 15GB RAM.
+Use the following [instructions](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/vertexai.md) to set up your VM in VertexAI.  Our notebooks include a notebook that uses R code, so make sure you are using the 'R' framework (R 4.2 at the time of this writing). You can then choose a name for your virtual machine (within GCP's naming rules) and preferably choose a server location closest to you. Ignore the advanced options for now, and a default virtual machine will be created. A default machine has 4 vCPUS and 15GB RAM.
 
 Creating a machine may take a few minutes to finish.
 
@@ -120,31 +120,31 @@ Jupyter is a powerful tool, with many useful features. For more information on h
 ## Workflow
 
 
-Below is the general workflow and GCP architecture of the module. We start by creating our experimental object (in our case, an R list data structure) from processed biomarker and proteomic data.  We then add metadata (i.e. data about the samples) and optional additional data (e.g. genome and annotation files, if we were using transcriptome data) appropriate to the experiment.  We can will save this object and reload it, add to it, and save it in subsequent notebooks.  It's important to run the notebooks in order to ensure that the experimental object is properly updated.  The next step will be analysis of known clinical biomarkers to each other using linear and logistic regression methods common in the clinical literature.  Once these methods are learned using known biomarkers, they can then be applied to newly discovered potential biomarkers. The next two notebooks will cover exploratory and differential analysis of proteomics data to identify new potential biomarkers.  We will look at how to normalize proteomics data, how batch effects can complicate data analysis and how to correct for them, and how to identify potential biomarkers by identifying proteins whose expression differs significantly between healthy and injured states. The final notebooks will cover background information on R data structures, the use of linear models in bioinformatics data analysis, principles of exploratory analysis, and how the methods covered in this module can be extended to machine learning methods for automated biomarker discovery.
+Below is the general workflow and GCP architecture of the module. We start by creating our experimental object (in our case, an R list data structure) from processed biomarker and proteomic data.  We then add metadata (i.e., data about the samples) and optional additional data (e.g. genome and annotation files, if we were using transcriptome data) appropriate to the experiment.  We can will save this object and reload it, add to it, and save it in subsequent notebooks.  It's important to run the notebooks in order to ensure that the experimental object is properly updated.  The next step will be analysis of known clinical biomarkers to each other using linear and logistic regression methods common in the clinical literature.  Once these methods are learned using known biomarkers, they can then be applied to newly discovered potential biomarkers. The next two notebooks will cover exploratory and differential analysis of proteomics data to identify new potential biomarkers.  We will look at how to normalize proteomics data, how batch effects can complicate data analysis and how to correct for them, and how to identify potential biomarkers by identifying proteins whose expression differs significantly between healthy and injured states. The final notebooks will cover background information on R data structures, the use of linear models in bioinformatics data analysis, principles of exploratory analysis, and how the methods covered in this module can be extended to machine learning methods for automated biomarker discovery.
 
 ![Workflow](images/uri_nosi_workflow.png)
 ![Architecture](images/URI_TID.png)
 
 To summarize:
 
-<b>Submodule 1: Introduction to Biomarkers</b> - Define what biomarkers are, identify the types of biomarkers, define properties of biomarkers that make them clinically useful, explore case studies of common clinical biomarkers<br>
-<b>Submodule 2: Introduction to R Data Structures</b> - (Optional)<br>
-<b>Submodule 3: Introduction to Linear Models</b> - (Optional)<br>
-<b>Submodule 4: Principles of Exploratory Analysis</b> - (Optional)<br>
-<b>Submodule 5: Rat Renal Ischaemia Reperfusion Injury Case Study</b> - Introduce the mouse renal IRI model used in this module<br>
-<b>Submodule 6: Linear and Logistic Regression for Comparison of Quantitative Biomarkers</b> - Compare two known clinical biomarkers using linear regression to identify state changes, Compare two biomarkers using binary classification schemes using logistic regression, evaluate classification schemes using ROC curves<br>
-<b>Submodule 7: Exploratory Analysis of Proteomics IRI Data</b> - Normalize proteomics data for further analysis, identify and correct for batch effects in the data, explore trends in the data using dimensionality reduction methods such as principle components analysis, plot proteomics data using heatmaps<br>
-<b>Submodule 8: Identification of IRI Biomarkers from Proteomic Data</b> - Perform differential analysis on proteomic data to identify potential biomarkers indicating state changes<br>
-<b>Submodule 9: Machine Learning Methods in Biomarker Discovery</b> - Explore basic machine learning methods using the IRI proteomics data<br>
+**Submodule 1: Introduction to Biomarkers** - Define what biomarkers are, identify the types of biomarkers, define properties of biomarkers that make them clinically useful, explore case studies of common clinical biomarkers.  
+**Submodule 2: Introduction to R Data Structures** - (Optional).  
+**Submodule 3: Introduction to Linear Models** - (Optional).  
+**Submodule 4: Principles of Exploratory Analysis** - (Optional).  
+**Submodule 5: Rat Renal Ischaemia Reperfusion Injury Case Study** - Introduce the mouse renal IRI model used in this module.  
+**Submodule 6: Linear and Logistic Regression for Comparison of Quantitative Biomarkers** - Compare two known clinical biomarkers using linear regression to identify state changes, Compare two biomarkers using binary classification schemes using logistic regression, evaluate classification schemes using ROC curves.  
+**Submodule 7: Exploratory Analysis of Proteomics IRI Data** - Normalize proteomics data for further analysis, identify and correct for batch effects in the data, explore trends in the data using dimensionality reduction methods such as principle components analysis, plot proteomics data using heatmaps.  
+**Submodule 8: Identification of IRI Biomarkers from Proteomic Data** - Perform differential analysis on proteomic data to identify potential biomarkers indicating state changes.  
+**Submodule 9: Machine Learning Methods in Biomarker Discovery** - Explore basic machine learning methods using the IRI proteomics data.  
 
 
 ## Data
 
-These tutorials use example sequence data procured from the laboratory of Dr. Nisanne Ghonem at the Department of Biomedical and Pharmaceutical Sciences, College of Pharmacy, University of Rhode Island. The relevant manuscripts can be found <a href="https://pubmed.ncbi.nlm.nih.gov/34328097/">here</a> and <a href="https://pubmed.ncbi.nlm.nih.gov/34560548/">here</a>.
+These tutorials use example sequence data procured from the laboratory of Dr. Nisanne Ghonem at the Department of Biomedical and Pharmaceutical Sciences, College of Pharmacy, University of Rhode Island. The relevant manuscripts can be found [here](https://pubmed.ncbi.nlm.nih.gov/34328097/) and [here](https://pubmed.ncbi.nlm.nih.gov/34560548/)
 
 ## Troubleshooting
 
-R packages, particularly those from BioConductor, often have many dependencies (i.e. other required packages they depend on to run).  This means that the first time you install these packages, it could take several minutes for everything to install.  <b>Please don't assume the notebook has locked up!!!</b>  When a code block is running, an asterisk (\*) will appear in brackets to the left of the code box.  This indicates the code box is currently executing code.  Once it has completed, the asterisk will be replaced by a number indicating the order of commands.  Most of the code boxes should run very quickly.  You can execute multiple code blocks at the same time, but they will run in the order that you input them.  If a code block is taking longer to run than you expect, it may be waiting on another code block to finish executing.
+R packages, particularly those from BioConductor, often have many dependencies (i.e., other required packages they depend on to run).  This means that the first time you install these packages, it could take several minutes for everything to install. **Please don't assume the notebook has locked up!!!**  When a code block is running, an asterisk (\*) will appear in brackets to the left of the code box.  This indicates the code box is currently executing code.  Once it has completed, the asterisk will be replaced by a number indicating the order of commands.  Most of the code boxes should run very quickly.  You can execute multiple code blocks at the same time, but they will run in the order that you input them.  If a code block is taking longer to run than you expect, it may be waiting on another code block to finish executing.
 
 If you get an error during package installation, it could be that R is trying to install a version of the package that is not compatible with the version of R you are using.  When you create your VM's to run this module, always use the latest version of R available (4.2 at the time of this writing).  Another common error is that a code block fails because the required package wasn't loaded.  All packages are loaded at the top of the notebook so double check that there are no errors there.
 
