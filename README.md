@@ -62,7 +62,7 @@ Submodules 2-4 cover optional background material for learners who need it and m
 
 ## Software Requirements
 
-This module employs Jupyter Notebooks running R 4.2 using Bioconductor for bioinformatics data analysis and will employ tidy data principles implemented by the *tidyverse* package.  A basic knowledge of R is expected but not required for completing the module. Submodule 02 will review R data structures that will be particularly relevant in regression analysis.  Required R packages will be installed within each submodule.  The installation can take several minutes the first time the packages are installed.  Key packages used include *tidyverse* and BioConductor packages such as *limma* .  Prior understanding of these packages is not required to complete this module but users are encouraged to learn more about these packages prior to or following completion of this module to better understand the commands used.
+This module employs Jupyter Notebooks running R 4.2 using Bioconductor for bioinformatics data analysis and will employ tidy data principles implemented by the *tidyverse* package.  A basic knowledge of R is expected but not required for completing the module. Submodule 02 will review R data structures that will be particularly relevant in regression analysis.  Required R packages will be installed within each submodule.  The installation can take several minutes the first time the packages are installed.  Key packages used include *tidyverse* and BioConductor packages such as *limma*.  Prior understanding of these packages is not required to complete this module but users are encouraged to learn more about these packages prior to or following completion of this module to better understand the commands used.
 
 Jupyter Notebooks are run through your browser and have the file extension *ipynb*.  Activate the notebook by double-clicking the file name and it will automatically open in your browser. Each notebook consists of markdown and code cells.  Markdown cells are for text and figures and are there to guide you through the chapters.  Code cells can be run by clicking the play arrow at the top of the screen or by hitting CTRL-ENTER.  The code will run within the notebook and generate the appropriate output.  You may freely change the code and re-run the block as often as you like.  This is useful if you want to test different analysis models or modify figures. 
 
@@ -157,8 +157,8 @@ This module was funded through an administrative supplement to the Rhode Island 
 
 ## Version History
 
-<b>v1.0 (11/2022)</b> - Launch of module with core notebooks (Chapter 1-6) and README.md.<br>
-<b>v1.1 (04/2023)</b> - Launch of final module with all submodules on NIH CLoudLab
+**v1.0 (11/2022)** - Launch of module with core notebooks (Chapter 1-6) and README.md.   
+**v1.1 (04/2023)** - Launch of final module with all submodules on NIH CLoudLab
 
 
 ## License for Data
