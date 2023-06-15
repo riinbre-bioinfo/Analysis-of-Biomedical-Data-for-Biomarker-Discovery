@@ -1,4 +1,6 @@
-![RIINBRE-Logo](images/RIINBRE-Logo.jpg)
+![course-card](images/URI-course-card.png)
+Image from https://doi.org/10.3389/fpsyt.2020.00432
+
 
 
 ---
