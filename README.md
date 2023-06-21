@@ -89,7 +89,9 @@ Use the following [instructions](https://github.com/STRIDES/NIHCloudLabGCP/blob/
 
 Creating a machine may take a few minutes to finish.
 
-![Workflow](images/R_notebook_setup.png)
+![Customize notebook](images/Customize-notebook.png)
+
+![Create R notebook](images/Create-R-notebook.png)
 
 
 ### Starting Your Virtual Machine
