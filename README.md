@@ -1,4 +1,4 @@
-![course-card](images/URI-course-card.png)
+![course-card](images/URI-course-card-2.png)
 Image from https://doi.org/10.3389/fpsyt.2020.00432
 
 
