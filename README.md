@@ -103,9 +103,9 @@ Note, when you are finished running code, you should turn off your virtual machi
 
 ### Downloading Tutorial Files
 
-Now that you have created your virtual machine, and are in the JupyterLab screen, you will need to download the module content.  The easiest way to do this is to clone the repository directly for the NIGMS Github. This can be done by opening a terminal in your JupyterLab environment (click the blue box with the white plus sign in the upper right corner and click the "Terminal" icon in the Launcher menu which comes up) and running the command `git clone https://github.com/NIGMS/BiomarkersURI`. 
+Now that you have created your virtual machine, and are in the JupyterLab screen, you will need to download the module content.  The easiest way to do this is to clone the repository directly for the NIGMS Github. This can be done by opening a terminal in your JupyterLab environment (click the blue box with the white plus sign in the upper right corner and click the "Terminal" icon in the Launcher menu which comes up) and running the command `git clone https://github.com/NIGMS/Analysis-of-Biomedical-Data-for-Biomarker-Discovery.git`. 
 
-This should download our repo, and the tutorial files inside, into a folder called 'BiomarkersURI'. Double click this folder now. Inside you will find all of the tutorial files, which you can double click and run.  You should also see a data file that contains the biomarker and proteomic data to be analyzed.
+This should download our repo, and the tutorial files inside, into a folder called 'Analysis-of-Biomedical-Data-for-Biomarker-Discovery'. Double click this folder now. Inside you will find all of the tutorial files, which you can double click and run.  You should also see a data file that contains the biomarker and proteomic data to be analyzed.
 
 
 ### Running Tutorial Files
