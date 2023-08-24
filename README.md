@@ -68,45 +68,24 @@ This module employs Jupyter Notebooks running R 4.2 using Bioconductor for bioin
 
 Jupyter Notebooks are run through your browser and have the file extension *ipynb*.  Activate the notebook by double-clicking the file name and it will automatically open in your browser. Each notebook consists of markdown and code cells.  Markdown cells are for text and figures and are there to guide you through the chapters.  Code cells can be run by clicking the play arrow at the top of the screen or by hitting CTRL-ENTER.  The code will run within the notebook and generate the appropriate output.  You may freely change the code and re-run the block as often as you like.  This is useful if you want to test different analysis models or modify figures. 
 
-
-## Installing the Module
+## Selecting your Google Cloud Platform Project
 
 The below steps guide you through setting up a virtual machine on Google Cloud Platform, downloading the module files, and launching the notebooks. You will need a Google account and access to a Google Cloud Platform Project.
 
 Once you have these, you can begin by first navigating to https://console.cloud.google.com/ and logging in with your credentials. Use the following [instructions](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/open_GCP_project.md) to open a GCP project.
 
 
-### Navigating to the Vertex AI Workbench
+## Creating a user managed notebook 
 
-Once a project has been selected, navigate to the Vertex AI Workbench (either by scrolling through the left-hand navigation menu or by using the search bar).  From here you will build a virtual machine and launch the module notebooks.
+Follow the steps highlighted [here](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/vertexai.md) to create a new user-managed notebook in Vertex AI. Follow steps 1-8 and be especially careful to enable idle shutdown as highlighted in step 7. For this module you should select Debian 10 and R 4.2 in the Environment tab in step 5. In step 6 in the Machine type tab, select n1-standard-4 from the dropdown box.
 
-
-### Creating a Virtual Machine
-
-A virtual machine is exactly what it sounds like.  When creating a VM, we are allocating computing resources into a contained environment where we can perform whatever task we need to do.  In GCP, we can either create VM's manually through Compute Engine or we can create them automatically through other processes.  We will now create a new VM for our modules through Vertex AI.
-
-Use the following [instructions](https://github.com/STRIDES/NIHCloudLabGCP/blob/main/docs/vertexai.md) to set up your VM in VertexAI.  Our notebooks include a notebook that uses R code, so make sure you are using the 'R' framework (R 4.2 at the time of this writing). You can then choose a name for your virtual machine (within GCP's naming rules) and preferably choose a server location closest to you. Ignore the advanced options for now, and a default virtual machine will be created. A default machine has 4 vCPUS and 15GB RAM.
-
-Creating a machine may take a few minutes to finish.
-
-![Customize notebook](images/Customize-notebook.png)
-
-![Create R notebook](images/Create-R-notebook.png)
-
-
-### Starting Your Virtual Machine
-
-Start your virtual machine by clicking __'OPEN JUPYTERLAB'__. This will automatically start your VM if it is not running (look for the green check mark).  You can also start the VM manually by clicking the start button.
-
-Note, when you are finished running code, you should turn off your virtual machine to prevent unneeded billing or resource use by checking your notebook and pushing the 'STOP' button.
-
-
-### Downloading Tutorial Files
+## Downloading Tutorial Files
 
 Now that you have created your virtual machine, and are in the JupyterLab screen, you will need to download the module content.  The easiest way to do this is to clone the repository directly for the NIGMS Github. This can be done by opening a terminal in your JupyterLab environment (click the blue box with the white plus sign in the upper right corner and click the "Terminal" icon in the Launcher menu which comes up) and running the command `git clone https://github.com/NIGMS/Analysis-of-Biomedical-Data-for-Biomarker-Discovery.git`. 
 
-This should download our repo, and the tutorial files inside, into a folder called 'Analysis-of-Biomedical-Data-for-Biomarker-Discovery'. Double click this folder now. Inside you will find all of the tutorial files, which you can double click and run.  You should also see a data file that contains the biomarker and proteomic data to be analyzed.
+This should download our repo, and the tutorial files inside, into a folder called 'Analysis-of-Biomedical-Data-for-Biomarker-Discovery'. Double click this folder now. Inside you will find all of the tutorial files, which you can double click and run. You should also see a data file that contains the biomarker and proteomic data to be analyzed.
 
+Note, when you are finished running code, you should turn off your virtual machine to prevent unneeded billing or resource use by checking your notebook and pushing the **STOP** button.
 
 ### Running Tutorial Files
 
